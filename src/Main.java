@@ -2,7 +2,11 @@ import main.java.day1.LocationInput;
 
 public class Main {
   public static void main(String[] args) {
+    LocationInput input = new LocationInput("src/main/resources/Day1.txt");
     System.out.println("Total Distance Calculated (Day 1 Part 1): " +
-        LocationInput.calculateDistanceLocationForFile("src/main/resources/Day1.txt"));
+        input.calculateDistanceLocationForFile());
+
+    System.out.println("Total Similarity Score Calculated (Day 1 Part 2): " +
+        input.calculateSimilarityScoreForFile());
   }
 }

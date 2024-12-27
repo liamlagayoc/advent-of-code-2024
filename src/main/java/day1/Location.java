@@ -13,4 +13,9 @@ public class Location {
   public List<Integer> sortBySmallest() {
     return ids.stream().sorted().toList();
   }
+
+  public int calculateSimilarityScore(int value, List<Integer> listToCompare) {
+    int count = listToCompare.stream().filter(x -> x == value).toList().size();
+    return value * count;
+  }
 }
